@@ -6,7 +6,7 @@
 const LINKS = {
   instagram: "https://www.instagram.com/fuerzaccqq",
   whatsapp: "https://www.whatsapp.com/channel/0029VaVzdrW89ind1cM7Dy44",
-  correo: "https://www.tiktok.com/@fuerzacccqq",
+  tiktok: "https://www.tiktok.com/@fuerzacccqq",
 };
 
 // --- Helpers DOM ---
@@ -40,7 +40,7 @@ function validateY(y){
 function setLinks(){
   $("#btnInstagram").href = LINKS.instagram;
   $("#btnWhatsApp").href = LINKS.whatsapp;
-  $("#btnCorreo").href = LINKS.correo;
+  $("#btntiktok").href = LINKS.tiktok;
 }
 
 function setYear(){
