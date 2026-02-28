@@ -282,9 +282,40 @@ function closeModal(){
 
 function initModal(){
   const modal = $("#modal");
+  if (!modal) return;
+
   modal.addEventListener("click", (e) => {
     if (e.target && e.target.hasAttribute("data-close")) closeModal();
   });
+
+  document.addEventListener("keydown", (e) => {
+    const isOpen = $("#modal").getAttribute("aria-hidden") === "false";
+    if (isOpen && e.key === "Escape") closeModal();
+  });
+
+  const btnPoster = $("#btnOpenPoster");
+  if (btnPoster){
+    btnPoster.addEventListener("click", () => {
+      openModal({
+        src: "assets/tabla-notas-minimas.jpg",
+        alt: "Tabla de notas mínimas",
+        caption: "Tabla de notas mínimas — Examen de recuperación"
+      });
+    });
+  }
+
+  // ✅ SOLO si existe (para que no reviente el JS)
+  const btnLogo = $("#btnOpenLogo");
+  if (btnLogo){
+    btnLogo.addEventListener("click", () => {
+      openModal({
+        src: "assets/logo-fuerza-cq2.png",
+        alt: "Logo FUERZA (CQ)²",
+        caption: "Logo FUERZA (CQ)²"
+      });
+    });
+  }
+}
 
   document.addEventListener("keydown", (e) => {
     const isOpen = $("#modal").getAttribute("aria-hidden") === "false";
