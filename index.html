@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FUERZA (CQ)² | FCQ - Universidad de Guayaquil</title>
+  <meta name="description" content="FUERZA (CQ)² • Recursos, calculadora de recuperación y apoyo estudiantil para la FCQ - Universidad de Guayaquil." />
+  <link rel="icon" href="assets/favicon.png" />
+
+  <!-- Fonts (una sola vez) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Decorative blobs (para fondo animado) -->
+  <div class="blob blob--a" aria-hidden="true"></div>
+  <div class="blob blob--b" aria-hidden="true"></div>
+  <div class="blob blob--c" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio">
+        <span class="brand__dot" aria-hidden="true"></span>
+        <span class="brand__text">FUERZA <span class="brand__lite">(CQ)²</span></span>
+      </a>
+
+      <nav class="nav" aria-label="Navegación">
+        <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+
+        <div class="nav__links" id="navLinks">
+          <a href="#calculadora">Calculadora</a>
+          <a href="#tabla">Tabla</a>
+          <a href="#recursos">Recursos</a>
+          <a href="#contacto" class="pill pill--solid">Contacto</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero__grid">
+
+        <!-- Columna izquierda -->
+        <div class="hero__copy reveal">
+          <div class="badge">
+            <span class="badge__spark" aria-hidden="true">✦</span>
+            Comunidad estudiantil • FCQ - UG
+          </div>
+
+          <h1>Misma química, <span class="grad">misma energía</span>.</h1>
+
+          <p class="lead">
+            Aquí tienes una calculadora rápida para el examen de recuperación, la tabla de notas mínimas
+            y accesos a nuestras redes para consultas y ayudas.
+          </p>
+
+          <div class="hero__cta">
+            <a class="pill pill--solid" href="#calculadora">Usar calculadora</a>
+            <a class="pill pill--ghost" href="#tabla">Ver tabla</a>
+          </div>
+
+          <div class="chips" aria-label="Ejemplos rápidos">
+            <button class="chip" type="button" data-y="6.0">Ej: 6.0</button>
+            <button class="chip" type="button" data-y="5.5">Ej: 5.5</button>
+            <button class="chip" type="button" data-y="4.8">Ej: 4.8</button>
+            <button class="chip" type="button" data-y="3.9">Ej: 3.9</button>
+          </div>
+
+          <div class="miniStats">
+            <div class="miniStats__item">
+              <div class="miniStats__num" data-count="240">0</div>
+              <div class="miniStats__label">Apoyos compartidos</div>
+            </div>
+            <div class="miniStats__item">
+              <div class="miniStats__num" data-count="60">0</div>
+              <div class="miniStats__label">Recursos por semestre</div>
+            </div>
+            <div class="miniStats__item">
+              <div class="miniStats__num" data-count="100">0</div>
+              <div class="miniStats__label">% ganas de mejorar</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Columna derecha (ANTES ESTABA ROTA) -->
+        <div class="hero__aside">
+          <div class="card card--glass card--hero reveal">
+            <div class="card__top">
+              <span class="tag tag--soft">FUERZA (CQ)²</span>
+            </div>
+
+            <img class="hero__logo" src="assets/logo-fuerza-cq2.png" alt="Logo FUERZA (CQ)²" />
+
+            <div class="card__bottom">
+              <p class="muted">
+                Si estás en recuperación, no estás solo. Respira, organiza tu plan y ve por esa nota.
+              </p>
+            </div>
+          </div>
+
+          <div class="card card--note reveal">
+            <div class="note__emoji" aria-hidden="true">🧪</div>
+            <div>
+              <div class="note__title">Tip rápido</div>
+              <div class="note__text">Recuerda: el promedio (Y) es de 1er y 2do parcial.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span> #JuntosSomosMasFuertes </span><span> • </span>
+          <span> Apoyo académico </span><span> • </span>
+          <span> Recursos de estudio </span><span> • </span>
+          <span> Comunidad FCQ </span><span> • </span>
+          <span> #JuntosSomosMasFuertes </span><span> • </span>
+          <span> Apoyo académico </span><span> • </span>
+          <span> Recursos de estudio </span><span> • </span>
+          <span> Comunidad FCQ </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALCULADORA -->
+    <section class="section" id="calculadora">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>Calculadora de recuperación</h2>
+          <p class="muted">
+            Ingresa tu promedio (Y) y te mostramos la nota mínima (X) para el examen de recuperación.
+          </p>
+        </div>
+
+        <div class="grid2">
+          <div class="card card--glass reveal">
+            <div class="card__titleRow">
+              <h3 class="card__title">Tu cálculo</h3>
+              <span class="tag tag--soft">Fórmula: X = (7 - 0.4Y) / 0.6</span>
+            </div>
+
+            <label class="field">
+              <span class="field__label">Promedio (Y) • 1er y 2do parcial</span>
+              <div class="field__control">
+                <input id="promedioInput" inputmode="decimal" placeholder="Ej: 6.3" autocomplete="off" />
+                <button class="pill pill--solid" id="btnCalcular" type="button">Calcular</button>
+              </div>
+              <span class="field__hint">Rango válido: 0.0 a 10.0</span>
+            </label>
+
+            <div class="result">
+              <div class="result__left">
+                <div class="result__label">Recuperación mínima (X)</div>
+                <div class="result__value" id="resultadoValor">—</div>
+                <div class="result__note" id="resultadoNota">Ingresa un promedio para ver el resultado.</div>
+              </div>
+
+              <div class="result__right">
+                <button class="pill pill--ghost" id="btnCopiar" type="button">Copiar</button>
+                <button class="pill pill--ghost" id="btnReset" type="button">Limpiar</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="card card--glass reveal">
+            <div class="card__titleRow">
+              <h3 class="card__title">Tabla dinámica</h3>
+              <span class="tag tag--soft">Genera valores alrededor de tu promedio</span>
+            </div>
+
+            <div class="row">
+              <label class="field field--inline">
+                <span class="field__label">Rango (±)</span>
+                <select id="rango">
+                  <option value="0.5">0.5</option>
+                  <option value="1" selected>1.0</option>
+                  <option value="1.5">1.5</option>
+                  <option value="2">2.0</option>
+                </select>
+              </label>
+
+              <div class="row__actions">
+                <button class="pill pill--solid" id="btnGenerarTabla" type="button">Generar</button>
+                <button class="pill pill--ghost" id="btnCSV" type="button">Descargar CSV</button>
+              </div>
+            </div>
+
+            <div class="tableWrap">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Promedio (Y)</th>
+                    <th>Recuperación (X)</th>
+                  </tr>
+                </thead>
+                <tbody id="tablaDinamica">
+                  <tr><td class="muted" colspan="2">Aún no hay datos. Calcula tu promedio y genera la tabla.</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p class="muted tiny">Consejo: genera la tabla para comparar rápidamente si cambian tus décimas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TABLA -->
+    <section class="section" id="tabla">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>Tabla de notas mínimas</h2>
+          <p class="muted">Aquí nuestra tabla referencial para llegar a tu calificación deseada.</p>
+        </div>
+
+        <div class="card card--glass reveal">
+          <div class="tablePoster">
+            <button class="posterBtn" id="btnOpenPoster" type="button" aria-label="Abrir tabla en grande">
+              <img src="assets/tabla-notas-minimas.jpg" alt="Tabla de notas mínimas para examen de recuperación" />
+              <span class="posterBtn__hint">Ampliar</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RECURSOS -->
+    <section class="section" id="recursos">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>Recursos rápidos</h2>
+          <p class="muted">Accesos directos para que no pierdas tiempo buscando.</p>
+        </div>
+
+        <div class="cards3">
+          <!-- Todos van al link de comunidad -->
+          <article class="card card--glass reveal">
+            <div class="cardIcon" aria-hidden="true">📌</div>
+            <h3>Sobre nosotros</h3>
+            <p class="muted">Material y resúmenes de nuestros próximos eventos.</p>
+            <a class="link" target="_blank" rel="noreferrer"
+               href="https://www.whatsapp.com/channel/0029VaVzdrW89ind1cM7Dy44">Ir a la comunidad →</a>
+          </article>
+
+          <article class="card card--glass reveal">
+            <div class="cardIcon" aria-hidden="true">🧠</div>
+            <h3>Consejos de estudio</h3>
+            <p class="muted">Tips y material para subir esas décimas y llegar a tu meta.</p>
+            <a class="link" target="_blank" rel="noreferrer"
+               href="https://www.whatsapp.com/channel/0029VaVzdrW89ind1cM7Dy44">Ir a la comunidad →</a>
+          </article>
+
+          <article class="card card--glass reveal">
+            <div class="cardIcon" aria-hidden="true">🤝</div>
+            <h3>Apoyo entre compañeros</h3>
+            <p class="muted">La idea es que nadie se quede atrás: pregunta, comparte y avanza.</p>
+            <a class="link" target="_blank" rel="noreferrer"
+               href="https://www.whatsapp.com/channel/0029VaVzdrW89ind1cM7Dy44">Ir a la comunidad →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="section" id="contacto">
+      <div class="container">
+        <div class="cta reveal">
+          <div class="cta__copy">
+            <h2>¿Necesitas ayuda con una materia?</h2>
+            <p class="muted">Escríbenos y te orientamos con material, tips o el contacto correcto.</p>
+          </div>
+          <div class="cta__actions">
+            <a class="pill pill--solid" id="btnWhatsApp" href="#" target="_blank" rel="noreferrer">WhatsApp</a>
+            <a class="pill pill--ghost" id="btnInstagram" href="#" target="_blank" rel="noreferrer">Instagram</a>
+            <a class="pill pill--ghost" id="btnCorreo" href="#" target="_blank" rel="noreferrer">Correo</a>
+          </div>
+        </div>
+
+        <footer class="footer">
+          <div class="footer__left">
+            <span class="brand brand--footer">
+              <span class="brand__dot" aria-hidden="true"></span>
+              <span class="brand__text">FUERZA <span class="brand__lite">(CQ)²</span></span>
+            </span>
+            <div class="muted tiny">© <span id="year"></span> • FCQ - Universidad de Guayaquil</div>
+          </div>
+
+          <div class="footer__right">
+            <a class="tiny link" href="#inicio">Subir ↑</a>
+          </div>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <!-- MODAL -->
+  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-label="Vista ampliada">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__panel" role="document">
+      <button class="modal__close" type="button" data-close aria-label="Cerrar">✕</button>
+      <img id="modalImg" alt="" />
+      <div class="modal__caption" id="modalCaption"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
