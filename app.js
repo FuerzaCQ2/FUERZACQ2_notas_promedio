@@ -5,7 +5,7 @@
 const LINKS = {
   instagram: "https://www.instagram.com/fuerzaccqq",
   whatsapp: "https://www.whatsapp.com/channel/0029VaVzdrW89ind1cM7Dy44",
-  tiktok: "https://www.tiktok.com/@fuerzacccqq",
+  tiktok: "https://www.tiktok.com/@fuerzacccqq?is_from_webapp=1&sender_device=pc",
 };
 
 // --- Helpers DOM ---
